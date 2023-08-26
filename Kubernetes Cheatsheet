@@ -1,0 +1,57 @@
+Kubernetes Basics:
+
+kubectl version: Check the client and server version of kubectl.
+kubectl cluster-info: Display cluster information.
+kubectl get nodes: List all nodes in the cluster.
+kubectl get pods: List all pods in the current namespace.
+kubectl get namespaces: List all namespaces in the cluster.
+kubectl config get-contexts: List available contexts (cluster/user pairs).
+kubectl config use-context <context-name>: Set the active context.
+Pods:
+
+kubectl run <pod-name> --image=<image>: Create a new pod.
+kubectl get pods -n <namespace>: List pods in a specific namespace.
+kubectl describe pod <pod-name>: Show details about a pod.
+kubectl logs <pod-name>: Display logs from a pod.
+kubectl exec -it <pod-name> -- /bin/sh: Open a shell inside a pod.
+kubectl delete pod <pod-name>: Delete a pod.
+Services:
+
+kubectl expose pod <pod-name> --port=<port>: Create a service for a pod.
+kubectl get services: List all services in the current namespace.
+kubectl describe service <service-name>: Show details about a service.
+kubectl delete service <service-name>: Delete a service.
+Deployments:
+
+kubectl create deployment <deployment-name> --image=<image>: Create a deployment.
+kubectl get deployments: List all deployments in the current namespace.
+kubectl scale deployment <deployment-name> --replicas=<replica-count>: Scale a deployment.
+kubectl rollout status deployment/<deployment-name>: Check the rollout status.
+kubectl rollout history deployment/<deployment-name>: View rollout history.
+kubectl rollout undo deployment/<deployment-name>: Rollback a deployment.
+ConfigMaps and Secrets:
+
+kubectl create configmap <configmap-name> --from-file=<path/to/config/file>: Create a ConfigMap.
+kubectl create secret generic <secret-name> --from-literal=<key>=<value>: Create a Secret.
+kubectl get configmaps or kubectl get secrets: List ConfigMaps or Secrets.
+kubectl describe configmap <configmap-name>: Show details about a ConfigMap.
+kubectl describe secret <secret-name>: Show details about a Secret.
+Namespaces:
+
+kubectl create namespace <namespace-name>: Create a new namespace.
+kubectl get pods -n <namespace>: List pods in a specific namespace.
+kubectl config set-context --current --namespace=<namespace-name>: Change the default namespace.
+kubectl delete namespace <namespace-name>: Delete a namespace and its resources.
+Persistent Volumes (PV) and Persistent Volume Claims (PVC):
+
+kubectl get pv: List all persistent volumes.
+kubectl get pvc: List all persistent volume claims.
+kubectl describe pv <pv-name>: Show details about a PV.
+kubectl describe pvc <pvc-name>: Show details about a PVC.
+Other Useful Commands:
+
+kubectl apply -f <yaml-file>: Apply a configuration from a YAML file.
+kubectl edit <resource-type> <resource-name>: Edit a resource in your preferred editor.
+kubectl explain <resource-type>: Get documentation for a resource type.
+kubectl proxy: Start a proxy to access the Kubernetes API.
+This cheatsheet provides a quick reference to common Kubernetes commands and concepts. Kubernetes is a powerful container orchestration platform, and understanding these basics is essential for managing containerized applications effectively.
