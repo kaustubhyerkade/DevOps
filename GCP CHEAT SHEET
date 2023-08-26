@@ -1,0 +1,55 @@
+Google Cloud SDK:
+
+gcloud init: Initialize the gcloud CLI.
+gcloud auth login: Log in to your GCP account.
+gcloud config set project <project-id>: Set the default project.
+gcloud config list: List the active configuration properties.
+gcloud components update: Update the gcloud components.
+Google Compute Engine (GCE):
+
+gcloud compute instances create <instance-name>: Create a virtual machine instance.
+gcloud compute instances list: List all VM instances.
+gcloud compute ssh <instance-name>: SSH into a VM instance.
+gcloud compute instances start/stop <instance-name>: Start or stop a VM instance.
+gcloud compute images list: List available VM images.
+gcloud compute disks list: List persistent disks.
+gcloud compute firewall-rules list: List firewall rules.
+Google Kubernetes Engine (GKE):
+
+gcloud container clusters create <cluster-name>: Create a GKE cluster.
+gcloud container clusters get-credentials <cluster-name>: Configure kubectl to access the GKE cluster.
+gcloud container clusters delete <cluster-name>: Delete a GKE cluster.
+kubectl get pods: List pods in the current context cluster.
+kubectl get services: List services in the current context cluster.
+kubectl apply -f <yaml-file>: Deploy resources to the cluster from a YAML file.
+kubectl delete <resource-type> <resource-name>: Delete a resource in the cluster.
+Google Cloud Storage (GCS):
+
+gsutil mb gs://<bucket-name>: Create a new GCS bucket.
+gsutil cp <file> gs://<bucket-name>: Copy a file to a GCS bucket.
+gsutil ls gs://<bucket-name>: List objects in a GCS bucket.
+gsutil rm gs://<bucket-name>/<object-name>: Delete an object in a GCS bucket.
+gsutil rsync -r <local-dir> gs://<bucket-name>: Synchronize a local directory with a GCS bucket.
+Google Cloud IAM (Identity and Access Management):
+
+gcloud projects add-iam-policy-binding <project-id> --member=<member> --role=<role>: Add an IAM policy binding to a project.
+gcloud iam service-accounts create <account-name>: Create a service account.
+gcloud iam service-accounts keys create <key-file.json> --iam-account=<account-email>: Create a key for a service account.
+Google Cloud Networking:
+
+gcloud compute addresses create <address-name>: Create a static IP address.
+gcloud compute forwarding-rules create <rule-name>: Create a forwarding rule.
+gcloud compute target-pools create <pool-name>: Create a target pool.
+gcloud dns managed-zones create <zone-name>: Create a managed DNS zone.
+Google Cloud Functions:
+
+gcloud functions deploy <function-name> --runtime=<runtime>: Deploy a Cloud Function.
+gcloud functions logs read <function-name>: Read logs for a Cloud Function.
+gcloud functions describe <function-name>: Get information about a Cloud Function.
+gcloud functions delete <function-name>: Delete a Cloud Function.
+Google Cloud SQL:
+
+gcloud sql instances create <instance-name>: Create a Cloud SQL instance.
+gcloud sql databases create <db-name> --instance=<instance-name>: Create a database in Cloud SQL.
+gcloud sql users set-password <user-name> --host=% --instance=<instance-name> --password=<new-password>: Set a password for a user in Cloud SQL.
+This GCP cheat sheet provides quick reference commands for common tasks across various GCP services. Please adapt the commands and flags to your specific use case and always refer to the official GCP documentation for comprehensive details and options.
