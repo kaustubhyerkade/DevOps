@@ -1,0 +1,44 @@
+Initialization and Setup:
+
+helm init: Initialize HELM on your cluster.
+helm repo add <name> <url>: Add a HELM repository.
+helm repo list: List added repositories.
+helm repo update: Update the local repository cache.
+Managing Charts:
+
+helm search: Search for available charts.
+helm install <release-name> <chart>: Install a chart.
+helm upgrade <release-name> <chart>: Upgrade a release.
+helm rollback <release-name> <revision>: Rollback to a previous release.
+helm uninstall <release-name>: Uninstall a release.
+helm list: List installed releases.
+helm history <release-name>: Show release history.
+Managing Chart Sources:
+
+helm fetch <chart>: Download a chart to the current directory.
+helm dependency update <chart>: Update chart dependencies.
+helm package <chart>: Package a chart into a versioned archive.
+helm lint <chart>: Check a chart for issues.
+Configuration and Values:
+
+helm show values <chart>: Display default chart values.
+helm install --set <key>=<value>: Set a value during installation.
+helm get values <release-name>: Show release values.
+helm get all <release-name>: Show detailed release information.
+HELM Repositories:
+
+helm repo add <name> <url>: Add a repository.
+helm repo update: Update repository information.
+helm repo list: List added repositories.
+helm repo remove <name>: Remove a repository.
+Using HELM with Tiller (Deprecated as of HELM 3):
+
+helm init --service-account <tiller-service-account>: Initialize HELM with a service account for Tiller.
+helm reset: Uninstall Tiller from your cluster.
+Using Templates:
+
+helm template <chart>: Render chart templates locally.
+HELM Plugins:
+
+HELM supports plugins for extending functionality. You can find available plugins on the HELM website.
+This cheat sheet covers the fundamental commands and concepts for using HELM. HELM is a powerful tool for managing Kubernetes applications, and you can explore more advanced features and customization options as you become more familiar with it.
