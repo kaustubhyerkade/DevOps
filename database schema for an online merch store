@@ -1,0 +1,90 @@
+Designing a database schema for an online merch store involves defining the tables, relationships, and attributes needed to manage- 
+1.products 
+2.customers 
+3.orders 
+and other relevant information. Below is a simplified database schema for an online merch store:
+
+Entities and Tables:
+
+Customers
+------------------------------------------------------------
+customer_id (Primary Key)
+first_name
+last_name
+email
+phone
+address
+
+
+Products
+------------------------------------------------------------
+product_id (Primary Key)
+name
+description
+price
+category_id (Foreign Key referencing Categories)
+
+
+Categories
+------------------------------------------------------------
+category_id (Primary Key)
+name
+Orders
+
+order_id (Primary Key)
+customer_id (Foreign Key referencing Customers)
+order_date
+status (e.g., pending, shipped, delivered)
+
+
+Order_Items
+------------------------------------------------------------
+order_item_id (Primary Key)
+order_id (Foreign Key referencing Orders)
+product_id (Foreign Key referencing Products)
+quantity
+unit_price
+
+
+Payments
+------------------------------------------------------------
+payment_id (Primary Key)
+order_id (Foreign Key referencing Orders)
+payment_date
+payment_method (e.g., credit card, PayPal)
+total_amount
+
+
+Reviews
+------------------------------------------------------------
+review_id (Primary Key)
+product_id (Foreign Key referencing Products)
+customer_id (Foreign Key referencing Customers)
+rating
+comment
+review_date
+
+
+
+Relationships:
+------------------------------------------------------------
+
+1.A Customer can place multiple Orders, but each Order belongs to one Customer (one-to-many relationship).
+2.An Order can contain multiple Order_Items, representing the products in that order (one-to-many relationship).
+3.Each Order_Item references a Product and an Order (many-to-one relationship).
+4.An Order is associated with one Payment, but a Payment can be linked to only one Order (one-to-one relationship).
+5.Multiple Reviews can be associated with a Product, and each Review is linked to a Customer (many-to-one relationship for both).
+
+
+Additional Considerations:
+------------------------------------------------------------
+
+1.You may want to include additional tables for managing user accounts and authentication if the store allows user registration and login.
+
+2.Implementing proper indexing, constraints, and data validation is crucial for data integrity and performance.
+
+3.Depending on the complexity of your store, you might need additional tables or attributes for tracking inventory, discounts, and promotions.
+
+4.This is a simplified schema, and the actual schema may vary based on the specific requirements of your online merch store. 
+Make sure to normalize your database to minimize redundancy and optimize performance. Additionally, consider scalability and 
+future enhancements when designing your database schema.
