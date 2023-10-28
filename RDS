@@ -1,0 +1,61 @@
+Amazon RDS Basics:
+
+Managed Service: Amazon RDS is a managed database service that handles routine database tasks such as provisioning, patching, backup, recovery, and scaling.
+Supported Database Engines:
+
+Amazon RDS supports various database engines including MySQL, PostgreSQL, Oracle, SQL Server, and MariaDB.
+Instance Types:
+
+RDS instances come in various types optimized for different use cases, e.g., General Purpose (db.t2, db.t3), Memory Optimized (db.r4, db.r5), and Compute Optimized (db.c4, db.c5).
+Multi-AZ Deployment:
+
+Multi-AZ deployment provides high availability with automatic failover. It creates a standby instance in a different Availability Zone.
+Read Replicas:
+
+Read replicas can be used to offload read traffic from the primary database, improving read scalability.
+Security:
+
+Amazon RDS supports Virtual Private Cloud (VPC) for network isolation.
+Use security groups and Network Access Control Lists (NACLs) for fine-grained access control.
+You can enable SSL for encrypted data in transit and use AWS Key Management Service (KMS) for data at rest encryption.
+Backup and Restore:
+
+Amazon RDS allows automated daily backups and manual snapshots.
+You can restore databases to any point in time within the retention period.
+Automated backups and snapshots can be retained for a specific duration.
+Scaling:
+
+Vertical Scaling: Change instance type to allocate more CPU and RAM.
+Horizontal Scaling: Use Read Replicas for read-heavy workloads.
+Amazon Aurora can automatically and elastically grow the volume size up to 64TB.
+Parameter Groups:
+
+Use parameter groups to configure database settings, like character sets, collation, and more.
+Performance Insights:
+
+Performance Insights provides a detailed view of database performance, helping to identify and troubleshoot issues.
+Monitoring and Alerts:
+
+Use Amazon CloudWatch to set up monitoring and alarms for RDS instances.
+Maintenance:
+
+AWS handles maintenance tasks like patching the database engine, which can be scheduled for a maintenance window.
+Database Engine Compatibility:
+
+Each database engine (e.g., MySQL, PostgreSQL) has its own compatibility and features. Be aware of the specific features and limitations of your chosen engine.
+Data Migration:
+
+Use the AWS Database Migration Service (DMS) for migrating databases to RDS.
+CLI and SDK:
+
+AWS provides a command-line interface (CLI) and software development kits (SDKs) for programmatic access and management of RDS.
+Cost Management:
+
+Understand the cost implications of RDS, including instance type, storage, data transfer, and backup storage costs.
+High Availability and Disaster Recovery:
+
+Utilize Multi-AZ deployments and automated backups for high availability and recovery.
+Security Best Practices:
+
+Implement proper security measures, including VPC, security groups, encryption, and access controls.
+Please note that Amazon RDS offers many advanced features and configurations, so this cheat sheet provides a basic overview. Always refer to the official AWS documentation and consider your specific use case for more detailed information and best practices.
