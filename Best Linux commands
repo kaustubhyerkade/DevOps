@@ -1,0 +1,2 @@
+1.hostnamectl -> shows hostname , chassis(VM/phy) , Machine ID , Boot ID , OS , Kernal , Architecture , Hardware+firmware+virtualization details  
+2.
