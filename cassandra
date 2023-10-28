@@ -1,0 +1,65 @@
+Cassandra Basics:
+
+Distributed NoSQL Database: Cassandra is a highly scalable, distributed, and decentralized database system designed for handling large amounts of data across multiple commodity servers.
+Data Model:
+
+Cassandra uses a wide-column store data model.
+Data is organized into tables, rows, and columns, similar to a traditional relational database.
+Key Concepts:
+
+Node: A single Cassandra instance/server.
+Cluster: A group of nodes that store your data.
+Keyspace: A namespace that defines data replication and settings.
+Table: The primary data structure for storing data in Cassandra.
+Column Family: A collection of related columns within a table.
+Data Distribution:
+
+Data is distributed across nodes using a partition key (a hash of the primary key).
+The partition key determines the node responsible for storing the data.
+Replication:
+
+Cassandra replicates data across multiple nodes for fault tolerance.
+The replication factor determines how many copies of the data are stored.
+Consistency:
+
+Cassandra provides tunable consistency levels, allowing you to choose how consistent you want your reads and writes to be.
+Data Types:
+
+Cassandra supports various data types, including text, integer, float, boolean, timestamp, UUID, and more.
+CQL (Cassandra Query Language):
+
+CQL is the query language for Cassandra, similar to SQL.
+Use CQL to create, retrieve, update, and delete data.
+Data Modeling:
+
+Denormalize data to optimize read performance.
+Model data based on your query patterns.
+Avoid using too many secondary indexes, as they can impact write performance.
+Compaction:
+
+Compaction is the process of merging and compacting SSTables to improve read performance.
+Tombstones:
+
+Cassandra uses tombstones to mark deleted data, and they are removed during compaction.
+Nodetool:
+
+Nodetool is a command-line utility for managing and monitoring Cassandra nodes.
+Architecture:
+
+Cassandra has a masterless, peer-to-peer architecture with no single point of failure.
+Data Centers:
+
+Cassandra can be deployed across multiple data centers for high availability and disaster recovery.
+Security:
+
+Cassandra provides authentication and authorization mechanisms to secure your data.
+Integration:
+
+Cassandra can be integrated with various tools and frameworks, including Apache Spark and Apache Kafka.
+Datastax Enterprise (DSE):
+
+DataStax provides DataStax Enterprise, a distribution of Cassandra with additional features and support.
+Community Support:
+
+Cassandra has a strong open-source community and extensive documentation.
+Please note that Cassandra is a powerful and complex database system, and this cheat sheet provides a basic overview. For detailed information and best practices, refer to the official Cassandra documentation and consider your specific use case.
