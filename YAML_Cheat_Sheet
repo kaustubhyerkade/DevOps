@@ -1,0 +1,59 @@
+YAML is a data serialisation language designed to be directly writable and readable by humans
+
+YAML does not allow the use of tabs
+Must be space between the element parts
+YAML is CASE sensitive
+End your YAML file with the .yaml or .yml extension
+YAML is a superset of JSON
+Ansible playbooks are YAML files
+
+
+# YAML Cheat Sheet
+
+# Comments start with the '#' symbol
+
+# Scalars
+key: value                # Key-value pair
+number: 42                # Integer
+float_number: 3.14        # Float
+boolean: true             # Boolean
+string: "Hello, YAML!"    # String (can also use single quotes: 'Hello, YAML!')
+
+# Lists
+fruits:                   # List of strings
+  - Apple
+  - Banana
+  - Orange
+
+numbers:                  # List of numbers
+  - 1
+  - 2
+  - 3
+
+# Nested structures
+person:                   # Nested dictionary
+  name: John
+  age: 30
+  hobbies:
+    - Reading
+    - Swimming
+
+# Inline notation
+inline_list: [1, 2, 3]    # Inline list
+inline_dict: {key1: value1, key2: value2}  # Inline dictionary
+
+# Multiline strings (using '|')
+multiline: |
+  This is a
+  multiline string
+  in YAML.
+
+# Anchors and aliases
+anchored_node: &anchor_name
+  key: value
+
+alias_node: *anchor_name  # This will have the same key-value pair as 'anchored_node'
+
+# Directives (usually used in YAML headers)
+%YAML 1.2
+---
