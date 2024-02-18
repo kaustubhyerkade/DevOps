@@ -1,0 +1,104 @@
+# Docker Cheat Sheet
+
+# Docker Basics
+
+# Pull an image from Docker Hub
+docker pull <image_name>
+
+# Run a container
+docker run <image_name>
+
+# Run a container in detached mode (in the background)
+docker run -d <image_name>
+
+# List running containers
+docker ps
+
+# List all containers (including stopped ones)
+docker ps -a
+
+# Stop a container
+docker stop <container_id_or_name>
+
+# Remove a container
+docker rm <container_id_or_name>
+
+# Remove a container forcefully (even if it's running)
+docker rm -f <container_id_or_name>
+
+# Remove all stopped containers
+docker container prune
+
+# Remove an image
+docker rmi <image_name>
+
+# Remove an image forcefully (even if it's used by a container)
+docker rmi -f <image_name>
+
+# Remove all unused images
+docker image prune
+
+# Dockerfile
+
+# Build an image from a Dockerfile
+docker build -t <image_name> <path_to_Dockerfile>
+
+# Containers
+
+# Attach to a running container
+docker attach <container_id_or_name>
+
+# Execute a command in a running container
+docker exec <container_id_or_name> <command>
+
+# Networking
+
+# List networks
+docker network ls
+
+# Create a new bridge network
+docker network create <network_name>
+
+# Volume Management
+
+# List volumes
+docker volume ls
+
+# Create a new volume
+docker volume create <volume_name>
+
+# Remove a volume
+docker volume rm <volume_name>
+
+# Docker Compose
+
+# Start containers defined in a docker-compose.yml file
+docker-compose up
+
+# Start containers in detached mode
+docker-compose up -d
+
+# Stop containers defined in a docker-compose.yml file
+docker-compose down
+
+# List containers defined in a docker-compose.yml file
+docker-compose ps
+
+# Logs
+
+# View logs of a container
+docker logs <container_id_or_name>
+
+# Miscellaneous
+
+# Show Docker system-wide information
+docker info
+
+# Display Docker version information
+docker version
+
+# Display detailed information on Docker containers or images
+docker inspect <container_id_or_name_or_image>
+
+# Clean up Docker resources (containers, images, volumes, networks)
+docker system prune
